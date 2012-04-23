@@ -776,6 +776,7 @@ class AdjudDB {
 		stat = conn.createStatement();
 		delete = ("delete from " + element_name +" where id = '" 
 				+id + "' and file_name = '"+fullName+"';");
+		stat.executeUpdate(delete); 
 
 		//finally, remove it from the overlap_extents
 		if(fullName.equals("goldStandard.xml")){
