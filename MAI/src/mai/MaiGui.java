@@ -644,7 +644,14 @@ public class MaiGui extends JPanel{
 			if (check){
 				String action = tagButtons.getSelection().getActionCommand();
 				Elem elem = adjudicationTask.getElem(action);
-				int[] selectedRows = tagTable.getSelectedRows();
+				int[] selectedViewRows = tagTable.getSelectedRows();
+				
+				//convert the rows of the table view into the rows of the 
+				//table model so that the correct rows are deleted
+				int[] selectedRows = new int[selectedViewRows.length];
+				for (int i=0;i<selectedRows.length;i++){
+					selectedRows[i]=tagTable.convertRowIndexToModel(selectedViewRows[i]);
+				}
 
 				DefaultTableModel tableModel = (DefaultTableModel)tagTable.getModel();
 				//find the id column
