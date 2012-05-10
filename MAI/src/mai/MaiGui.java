@@ -558,6 +558,7 @@ public class MaiGui extends JPanel{
 				if(el instanceof ElemExtent){
 					try{
 						high.addHighlight(start,end,new TextHighlightPainter(Color.orange));
+						displayAnnotation.scrollRectToVisible(displayAnnotation.modelToView(start));
 					}catch (Exception b) {
 					}
 				}//end if ElemExtent
@@ -578,6 +579,7 @@ public class MaiGui extends JPanel{
 						int endSelect = Integer.parseInt(locs[1]);
 						try{
 							high.addHighlight(startSelect,endSelect+1,new TextHighlightPainter(Color.orange));
+							displayAnnotation.scrollRectToVisible(displayAnnotation.modelToView(startSelect));
 						}catch(Exception ex){
 							System.out.println(ex);
 						}
@@ -1018,7 +1020,7 @@ public class MaiGui extends JPanel{
 	 * 
 	 * @param start the start of the span
 	 * @param end the end of the span
-	 * @return the text at the specificed location
+	 * @return the text at the specified location
 	 */
 	private String getText(int start, int end){
 		DefaultStyledDocument styleDoc = (DefaultStyledDocument)displayAnnotation.getStyledDocument();
