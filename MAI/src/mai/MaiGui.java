@@ -61,7 +61,7 @@ import java.util.*;
  * 
  * 
  * @author Amber Stubbs 
- * @version 0.7 April 16, 2012
+ * @version 0.7.1 May 10, 2012
  */
 
 public class MaiGui extends JPanel{
@@ -1803,7 +1803,7 @@ public class MaiGui extends JPanel{
 		about.setLocation(100,100);
 		about.setAlignmentX(Component.CENTER_ALIGNMENT);
 		about.setAlignmentY(Component.CENTER_ALIGNMENT);
-		String text = ("MAI \nMulti-document Adjudication Interface \nVersion 0.6 \n\n" +
+		String text = ("MAI \nMulti-document Adjudication Interface \nVersion 0.7.1 \n\n" +
 				"Copyright Amber Stubbs\nastubbs@cs.brandeis.edu \n Lab for " +
 				"Linguistics and Computation, Brandeis University 2010-2012." + 
 				"\n\nThis distribution of MAI (the software and the source code) \n" +
